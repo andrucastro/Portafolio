@@ -39,10 +39,38 @@ function showCongratulations(theButtonClicked){
 
          /*----------------------------------------------- DARK MODE SECTION----------------------------------------------------------*/ 
 
+         // find the button wiht the ID switch 
          const btnSwitch = document.querySelector('#switch');
 
+        //listend if the user make click in the button 
          btnSwitch.addEventListener('click', () =>{
+             // add the class dark to body tag 
             document.body.classList.toggle('dark');
+             // add the class active to the button 
             btnSwitch.classList.toggle('active');
-         })
-  
+
+              /*-------------- store dark mode in locar storage--------------*/
+
+         if(document.body.classList.contains('dark')){
+             
+            // if you are in dark mode, store the string "you are in dark mode"
+            localStorage.setItem('dark-mode', 'you are in dark mode');
+        }  
+            // if you are in dark mode, store the string "you are not in dark mode"
+            else{
+            localStorage.setItem('dark-mode', 'you are not in dark mode'); 
+            } 
+         });
+
+         // dectect current mode 
+         //if the key "dark-mode" is equal to 'you are in dark mode' ( if the user is in dark mode)
+         if(localStorage.getItem('dark-more') === 'you are in dark mode'){
+            // add the class dark
+            document.body.classList.add('dark');
+         } 
+         //if the key "dark-mode" is equal to 'you are not in dark mode'
+         else{
+            document.body.classList.remove('dark');
+         }
+         
+       
