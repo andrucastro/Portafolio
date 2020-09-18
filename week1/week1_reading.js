@@ -53,24 +53,29 @@ function showCongratulations(theButtonClicked){
 
          if(document.body.classList.contains('dark')){
              
-            // if you are in dark mode, store the string "you are in dark mode"
-            localStorage.setItem('dark-mode', 'you are in dark mode');
+            // if you are in dark mode, store the string "true" 
+            localStorage.setItem('dark-mode', 'true');
         }  
-            // if you are in dark mode, store the string "you are not in dark mode"
+            // if you are in dark mode, store the string "false"
             else{
-            localStorage.setItem('dark-mode', 'you are not in dark mode'); 
+            localStorage.setItem('dark-mode', 'false'); 
             } 
          });
 
+
          // dectect current mode 
-         //if the key "dark-mode" is equal to 'you are in dark mode' ( if the user is in dark mode)
-         if(localStorage.getItem('dark-more') === 'you are in dark mode'){
+         //if the key "dark-mode" is equal to 'true' (if the user is in dark mode)
+         if(localStorage.getItem('dark-mode') === 'true'){
             // add the class dark
             document.body.classList.add('dark');
+            // the button is active 
+            btnSwitch.classList.add('active');
          } 
-         //if the key "dark-mode" is equal to 'you are not in dark mode'
+         //if the key "dark-mode" is equal to 'false'
          else{
+             //remove the clas dark 
             document.body.classList.remove('dark');
+            //take of the class active from the button tag 
+            btnSwitch.classList.remove('active');
          }
          
-       

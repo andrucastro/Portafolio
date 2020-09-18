@@ -82,17 +82,19 @@
 }
 
 /*---------------------------------------------------------- dark mode section---------------------------------------------------------------- */
+
 .dark_mode {
   width: 80%;
   margin: 1em auto;
   padding: 1em;
   background-color:rgb(224, 224, 224);
+  transition: .5s ease all ;
 }
 
 /* fondo a modo obscuro */
 body.dark .dark_mode{
   background-color: black;
-  transition: .5s ease all;
+  transition: .5s ease all ;
 }
 
 body.dark .dark_mode h2{
@@ -124,7 +126,6 @@ body.dark div:nth-child(4){
   -webkit-box-shadow: -1px 4px 15px -3px rgba(0, 0, 0, 0.31);
   box-shadow: -1px 4px 15px -3px rgba(0, 0, 0, 0.31);
   background-color: white;
-  padding-bottom: 10px;
 }
 
 .dark_mode ul {
@@ -143,6 +144,7 @@ body.dark div:nth-child(4){
 
 .dark_mode li a {
   color: black;
+  text-decoration: none;
 }
 
 .switch {
@@ -194,29 +196,27 @@ body.dark div:nth-child(4){
   color: white;
 }
 
-.dark_mode div {
-  width: 80%;
-  padding-top: 2em;
+.dark_mode img {
+  width: 70%;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1em;
+  background-color: none;
 }
 
-.dark_mode div img {
-  width: 100%;
-}
-
-div:nth-child(4) {
+div:nth-child(5) {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: white;
+  background-color: none;
   padding: 1em 0;
 }
 
-div:nth-child(4) button {
+div:nth-child(5) button {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
