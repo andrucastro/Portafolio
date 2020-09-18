@@ -8,16 +8,28 @@ function showCongratulations(theButtonClicked){
 
 
      function loadStory(){
+         //use the ".value" to get access to a text inside a textarea or imput tag.
          var storyName = document.getElementById("name_input").value
+
+         // ("getItem" to get access information)
          var storyHTML = localStorage.getItem(storyName)
+
+         //find the tag with the Id story_editor, take what is inside the tag, and store it in the variable "storyHTML"
          document.getElementById("story_editor").value = storyHTML
          }
+         /*
+         */
          function saveStory(){
+         // find the tag with the ID "name_imput", and store the content in the storyName variable (save story name)    
          var storyName = document.getElementById("name_input").value
+         // find the tag with the ID "story_editor", and store the content in the storyHTML variable (save story name)
          var storyHTML = document.getElementById("story_editor").value
+         // store the variable storyName and storyHTML in the locar storage. ("setItem" to store information) 
          localStorage.setItem(storyName, storyHTML)
          }
          function displayStory(){
+         //store in the variable "storyHTMTL" the content     
          var storyHTML = document.getElementById("story_editor").value
+
          document.getElementById("story_display").innerHTML = storyHTML;
          }
