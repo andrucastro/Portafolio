@@ -11,7 +11,7 @@ function showCongratulations(theButtonClicked){
          //use the ".value" to get access to a text inside a textarea or imput tag.
          var storyName = document.getElementById("name_input").value
 
-         // ("getItem" to get access information)
+         //get the name of the story from the locar storage ("getItem" to get access information)
          var storyHTML = localStorage.getItem(storyName)
 
          //find the tag with the Id story_editor, take what is inside the tag, and store it in the variable "storyHTML"
