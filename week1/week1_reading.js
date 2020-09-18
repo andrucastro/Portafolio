@@ -6,6 +6,8 @@ function showCongratulations(theButtonClicked){
     theButtonClicked.innerHTML = "Click Again!"; 
     }
 
+    /*-------------------------------------------------- STORY WRITER SECTION--------------------------------------------------------*/
+
 
      function loadStory(){
          //use the ".value" to get access to a text inside a textarea or imput tag.
@@ -34,3 +36,13 @@ function showCongratulations(theButtonClicked){
          //display the content in the section wiht the id "story_display" 
          document.getElementById("story_display").innerHTML = storyHTML;
          }
+
+         /*----------------------------------------------- DARK MODE SECTION----------------------------------------------------------*/ 
+
+         const btnSwitch = document.querySelector('#switch');
+
+         btnSwitch.addEventListener('click', () =>{
+            document.body.classList.toggle('dark');
+            btnSwitch.classList.toggle('active');
+         })
+  
