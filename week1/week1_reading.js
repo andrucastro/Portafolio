@@ -28,8 +28,9 @@ function showCongratulations(theButtonClicked){
          localStorage.setItem(storyName, storyHTML)
          }
          function displayStory(){
-         //store in the variable "storyHTMTL" the content     
+         //store the content of the text area in the variable "storyHTMTL"     
          var storyHTML = document.getElementById("story_editor").value
-
+        
+         //display the content in the section wiht the id "story_display" 
          document.getElementById("story_display").innerHTML = storyHTML;
          }
