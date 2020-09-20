@@ -6,6 +6,7 @@ padding: 0;
 .profile_section h1 {
 text-align: center;
 margin-top: 1em;
+font-family: 'Raleway', sans-serif;
 }
 
 .profile_section img {
@@ -18,5 +19,24 @@ margin: 2em auto 1em;
 .profile_section p{
     text-align: center;
     font-size: 14px;
+    font-family: 'Slabo 27px', serif;
+    line-height: 2em;
 }
 
+nav{
+    padding-top: 1em;
+   
+    width: 80%;
+    display: block;
+    margin-left:auto ;
+    margin-right: auto;
+    text-align: center;
+    
+}
+
+nav a{
+    color: rgb(14, 46, 105);
+    font-size: 1.5em;
+    font-family: 'Slabo 27px', serif;
+    text-decoration: none;
+}

@@ -91,10 +91,20 @@
   transition: .5s ease all ;
 }
 
+.dark_mode p{
+  text-align: center;
+}
+
+
 /* fondo a modo obscuro */
 body.dark .dark_mode{
   background-color: black;
   transition: .5s ease all ;
+}
+
+body.dark p{
+  text-align: center;
+  color: white;
 }
 
 body.dark .dark_mode h2{
@@ -205,7 +215,7 @@ body.dark div:nth-child(4){
   background-color: none;
 }
 
-div:nth-child(5) {
+div:nth-child(6) {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -216,7 +226,7 @@ div:nth-child(5) {
   padding: 1em 0;
 }
 
-div:nth-child(5) button {
+div:nth-child(6) button {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
