@@ -96,7 +96,7 @@
 }
 
 
-/* fondo a modo obscuro */
+/*Dark mode styles */
 body.dark .dark_mode{
   background-color: black;
   transition: .5s ease all ;
