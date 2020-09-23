@@ -1,3 +1,14 @@
+
+/*----------------------------- index week 2 styles--------------------------------*/
+
+#week2_index{
+    background: url(../week2/img/backgroundCoding.png)
+}
+
+
+
+/*----------------------------- Ninja quiz Section --------------------------------*/
+
 @import url('https://fonts.googleapis.com/css?family=Baloo+Da|Roboto');
 body{
     background: #5F1C1C;
