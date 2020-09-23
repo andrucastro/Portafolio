@@ -9,9 +9,3 @@ alert(`You answered ${answer}`);
 
 
 
-/*---------------------practices unsing set-------------------------*/ 
-
-
-
-
-/*---------------------practices unsing loops-------------------------*/ 
