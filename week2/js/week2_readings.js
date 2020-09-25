@@ -69,6 +69,11 @@ for (let y = 0; y < size; y++) {
 console.log(board);
 
 
-/*---------------------------------------------Section III notes and thinf that I didn't know -------------------------------------------*/
+/*---------------------------------------------Section III notes and things that I didn't know -------------------------------------------*/
 
 // Arrow funtions 
+/*variable name*/    /*parameters*/       /*actions, and returns value*/
+const add2Numbers = (number1, number2) => number1 + number2;
+
+//declare the fuction 
+document.getElementById('add2Numbers').innerHTML += " " + add2Numbers(10,20) + " (review the week2_readings,js file) ";
