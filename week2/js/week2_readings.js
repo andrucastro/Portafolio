@@ -161,7 +161,7 @@ function main(price, state){
     }
 
   // display the total amount to the user 
-  document.getElementById('result').innerHTML = total.toFixed(2);
+  document.getElementById('result').innerHTML = "$" + total.toFixed(2);
 }
 
 
