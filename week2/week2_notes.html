@@ -29,7 +29,26 @@
         <h3> Example Arrow function</h3>
         <p> const add2Numbers = (number1, number2) => number1 + number2;</p>
         <span id="add2Numbers" class=output > Result: </span>
-    </div>         
+    </div>
+    <div> 
+        <h3>Tax calculator</h3>
+        <p> This program can calculate the price of purchase in 4 different states from USA</p>
+        <p>Type the price of the product</p>
+        <input id=price></input>
+        <p>Discount porcentage | enter a number between 1-100</p>
+        <input id=discount></input>
+        <p>Select a State</p>
+        <select id=stateOption>
+            <option value="Texas">Texas</option>
+            <option value="NewYork">Nueva York</option>
+            <option value="California">Clalifornia</option>
+            <option value="Florida">Florida</option>
+        </select> 
+        <br>
+        <button onclick="main()">calculate</button>
+        <span id="result">Final price is: </span>
+    </div>
+                
     <script src="../week2/js/week2_readings.js"></script>
 </body>
 </html>

@@ -77,3 +77,97 @@ const add2Numbers = (number1, number2) => number1 + number2;
 
 //declare the fuction 
 document.getElementById('add2Numbers').innerHTML += " " + add2Numbers(10,20) + " (review the week2_readings,js file) ";
+
+/*----------------------------------------------------------Call backs practice----------------------------------------------------------*/
+
+// Tax calculator 
+
+// stept 1: get the price from the input price.  
+function getprice(){
+  // find the input with the ID 'price' and store the value in the variable 'price'
+  let price = parseFloat(document.getElementById('price').value)
+  
+  //return the variable price 
+  return price;
+}
+
+// This function calculates the price by applying a discount percentage
+function calculateDiscount(price){
+
+  // assign the value returned by the function getPrice() to parameter price. 
+  price = getprice();
+
+  // find the input with the ID 'discoun' and store the value in the variable 'discoun'
+  let discount = parseFloat(document.getElementById('discount').value);
+
+  // Declare a variable 'discountApplayed' to store the final result 
+  let discountApplayed = 0;
+
+  // evaluate : if the user doesn't enter any value assign 0 to "discountApplayed" and "price" variable
+  if(discount === "" ){
+
+    discountApplayed = 0; 
+  }
+  
+  // if the discount value is between 100% and 0% calculate the discount and store the value in the "discountApplayed" variable 
+  else if( discount <= 100  && discount >= 0 ){
+
+     discountApplayed = price - ((discount / 100) * price);
+  }
+
+  // in any other case the "discountApplayed" variable will be 0
+  else{
+
+    discountApplayed = 0;
+  }
+  
+  // retunr the "discountApplayed" variable 
+  return discountApplayed;
+  
+}
+
+//get the estate chosen by the user
+function getstate(){
+  // find the input with the ID 'stateOption' and store the value in the variable 'state'
+  let state = document.getElementById('stateOption').value
+  
+   //return the variable state
+  return state;
+}
+
+function main(price, state){
+  
+  // assign the value returned by the function calculateDiscount() to parameter price. 
+  price = calculateDiscount()
+  
+  // assign the value returned by the function getstate() to parameter state. 
+  state = getstate()
+  
+  // declare a variable to store the final result with taxes 
+   let total="";
+
+   // evaluate the estate and assign a tax rate, and calculate the final price 
+    if(state === "Texas"){
+        total = price * 0.0625 + price
+    }
+    else if(state === "NewYork"){
+        total = price * 0.0575 + price
+    }
+    else if(state === "California"){
+        total = price * 0.0825 + price
+    }
+    else if(state === "Florida"){
+        total = price * 0.06 + price
+    }
+
+  // display the total amount to the user 
+  document.getElementById('result').innerHTML = total.toFixed(2);
+}
+
+
+
+
+
+
+
+
