@@ -25,6 +25,7 @@ let score = 0;
 //"save the question in the variable 'questions' at the right and the answers in the variable answers at the left"
 */
 
+
 //CHAPTER 4
 const quiz = [
     ["What is Superman's real name?","Clark Kent"],
