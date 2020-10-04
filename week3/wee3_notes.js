@@ -113,7 +113,47 @@ listItems[1];
 listItems[2];
 //<< <li class='hero'>Wonder Woman</li>
 
+/*------------------------------------------------------Events---------------------------------------------------------------*/
+
+// call the document with the id 'clicl'
+const clickParagraph = document.getElementById('click');
+//add an event listener when user cliks and display the 'word' in the console 
+clickParagraph.addEventListener('click',() => console.log('click') );
+//add an event listener when user scroll down and display the 'down' in the console 
+clickParagraph.addEventListener('mousedown',() => console.log('down') );
+//add an event listener when user scroll up and display the 'up' in the console 
+clickParagraph.addEventListener('mouseup',() => console.log('up') );
 
 
 
+//DOUBE CLICK 
 
+
+// get the element with the id "dblclickParagraph"
+const dblclickParagraph = document.getElementById('dblclick');
+
+// add an event listener to the element inside the constant "dblclickParagraph" and run the function highlight
+dblclickParagraph.addEventListener('dblclick', highlight);
+function highlight(event){
+
+    //add or remove the class highlight every time user makes doube click (This new class change the color backgorund)
+    event.target.classList.toggle('highlight');
+}
+
+
+//MOUSE OVER
+
+const mouseParagraph = document.getElementById('mouse');
+// add the class highlight when the mouse is hover the element. (like pseudo class hover in css)
+mouseParagraph.addEventListener('mouseover', highlight);
+mouseParagraph.addEventListener('mouseout', highlight);
+
+
+//MOUSE MOVE example 
+
+mouseParagraph.addEventListener('mousemove', () =>  console.log('You Moved!') );
+
+
+// KEY EVENTS 
+
+addEventListener('keydown',highlight);
