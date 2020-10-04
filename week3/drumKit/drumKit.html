@@ -60,17 +60,18 @@
 <script>
 
  function removeTransition(e) {
-
+    //remove the trnasform
     if (e.propertyName !== 'transform') return;
+    //remove the class  palyed 
     e.target.classList.remove('playing');
   }
 
   function playSound(e) {
-    // stores in the const audio the audio element wiht the data-jey " "
+    // store in the const audio the audio element is key
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    // stores the key typed by the user and its code 
+    // store the div element an its key 
     const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-    //  if there is no audio element associated don't do anything
+    //  if there is not an audio element associated don't do anything
     if (!audio) return;
     // add the class paying to change the style 
     key.classList.add('playing');
@@ -81,6 +82,7 @@
   }
   // find all the keys 
   const keys = Array.from(document.querySelectorAll('.key'));
+  //listen all the keys 
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
   // run the funtion play sound when the user type a key  
