@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height: 300px ;
+            width: 300px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px ;
+            grid-template-rows:100px 100px 100px ;
+        }
+
+    
+
+        .cell{
+            border-bottom: solid black 1px;
+            border-right: solid black 1px;
+        }
+
+        #div3,#div6,#div9{
+            border-right:none ;
+        }
+
+        #div7,#div8,#div9{
+            border-bottom:none ;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="cell" id="div1"></div>
+        <div class="cell" id="div2"></div>
+        <div class="cell" id="div3"></div>
+        <div class="cell" id="div4"></div>
+        <div class="cell" id="div5"></div>
+        <div class="cell" id="div6"></div>
+        <div class="cell" id="div7"></div>
+        <div class="cell" id="div8"></div>
+        <div class="cell" id="div9"></div>
+    </div>
+    <button onclick="reset()"> Reset</button>
+    <script>
+
+        const container = document.getElementById('container')
+        container.addEventListener("click", doBoard)
+        
+        var counter = 0 
+
+        function doBoard (){
+
+           const target = event.target
+
+            if(counter % 2 === 0) {
+            
+                counter++
+
+                target.innerHTML ="O"
+            }
+            else{
+                counter++
+                target.innerHTML ="X"
+            }
+        }
+
+        function logic(){
+            getElementById(div1).value 
+
+        }
+
+        function reset(){
+
+            location.reload()
+        }
+
+    </script>
+</body>
+</html>

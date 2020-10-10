@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <title>Hero Form</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding:0;
+        }
+
+        #formsexcersie{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-gap: 3%;
+        }
+
+        #purchaseForm{
+            background-color: rgb(75, 74, 72);
+        }
+
+        #invoice{
+            background-color: rgb(253, 213, 36);
+        }
+
+        #invoice div{
+            background-color:white;
+            width: 80%;
+            margin: 2em auto;
+            padding: 1em;
+
+        }
+
+
+
+        form{
+            max-width: 500px;
+            margin: 2em auto;
+            border: solid 1px black;
+            padding: 2em;
+            background-color:rgb(236, 232, 225) ;
+
+        }
+
+        label{
+            display: block;
+            padding: 1rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #userName,#lastName,#email,#phone{
+            padding: 0.5em 1em;
+            max-width: 400px;
+            width: 100%;
+            border: 0.5px solid rgb(187, 182, 182);
+            border-radius: 14px;
+        }
+
+    
+
+        button{
+            width: 100%;
+            border: 0;
+            background-color: rgb(253, 213, 36);
+            padding: 0.5em;
+            font-size: 16px;
+            border-radius: 20px;
+            color:rgb(75, 74, 72);
+            margin: 2em 0;
+        }
+
+        select{
+            border: none;
+            text-transform: uppercase;
+            background-color: rgb(100, 100, 98);
+            padding: 10px;
+            color: white;
+        }
+
+        #invoice p{
+            padding: 1.5em;
+            border: 1px solid rgb(75, 74, 72);
+            font-weight: bold;
+        }
+
+        #invoice p span{
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+        h2{
+            text-align: center;
+            margin: 1em;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<div id="formsexcersie">   
+    <div id="purchaseForm">
+    <form action="" name="purchaseData" method="">
+        <label for="userName">
+            <input type="text" name="userName" placeholder="Name" id="userName">
+        </label>
+        <label for="lastName">
+            <input type="text" name="lastName" placeholder=" Last Name" id="lastName">
+        </label>
+        <label for="email">
+            <input type="email" name="userEmail" placeholder="Email" id="email"> 
+        </label>
+        <label for="phone" >
+            <input type="tel" name="Phone" id="phone" placeholder="phone Number">
+        </label>
+        <label for="shiping">
+            <input type="radio" name="shiping" id="shiping" value="express shiping"> Express shiping   
+            <input type="radio" name="shiping" id="shiping" value="standard shiping"> Standard shiping
+        </label>    
+        <label for="state">
+            <select id=stateOption>
+                <option value=" ">Select a state</option>
+                <option value="Florida">Arizona</option>
+                <option value="Texas">Texas</option>
+                <option value="NewYork">Nueva York</option>
+                <option value="California">Clalifornia</option>
+                <option value="Florida">Florida</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Michigan">Michigan</option>
+            </select> 
+        </label>
+        <button type="button" id="catch" >Check invoice</button>
+    </form>
+    </div>
+
+    <div id="invoice">  
+        <div>
+            <h2>Invoice Summary</h2>
+            <p>User Name :<span id="invoice_name"></span></p>
+            <p>last Name :<span id="invoice_lastname"></span></p>
+            <p>email     :  <span id="invoice_email"></spanid></span></p>
+            <p>phone     :  <span id="invoice_phone"></span></span></p>
+            <p>shiping   : <span id="invoice_shiping"></span></span></p>
+            <p>state     : <span id="invoice_state"></span></span></p>
+        </div>
+    </div>
+    This program helps Users to create a invoice and stores the last invoicecreated by the user 
+</div> 
+<script src="../week4/week4_excercise.js"></script>
+
+
+</body>
+</html>
