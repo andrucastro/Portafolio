@@ -4,52 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #square {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background: #d16;
+} 
+    </style>
 </head>
 <body>
+    <p>please open the console to see more notes</p>
+    <form name='search' action='/search'>
+        <input name='searchInput'>
+        <button type='submit'>Search</button>
+    </form>
+    <button type='submit'>Submit</button>
+    <input type='submit' value='Submit'>
+    <input type='image' src='button.png'>
+
+    <div id='square'></div>
     
   <script>
-      /*
+      
 
------------HOW TO CALL OR FIND A FORM -----------
+/*-----------HOW TO CALL OR FIND A FORM -----------*/
 
-Using index of notation 
-const form = document.forms[0]; 
+//Using index of notation 
+//const form = document.forms[0]; 
 
-using the name of the form 
-const form = document.forms.search; 
+//using the name of the form 
+//const form = document.forms.search; 
 
-2 way using the name of the form 
+//2 way using the name of the form 
 const form = document.forms['search'];
 
 
-----------ACCESSING AN ELEMENT INSIDE THE FORM -----------
+/*----------ACCESSING AN ELEMENT INSIDE THE FORM -----------*/
 
- write fromt and the name of the element 
+//write fromt and the name of the element 
 
-const input = form.searchInput; 
+//const input = form.searchInput; 
 
-other way
-const input = form['searchInput']; 
-
-
-----------EVENTS -----------
-
-focus : Event help us to indentify when user has selected an input field or elements 
-
-1) we localize the form and input field 
-const input = form.elements.searchInput;
-
-2) we add an event "focus" and when the user select the input field, we run a function that displays with an alert  
-input.addEventListener('focus', () => alert('focused'), false); 
-
- he blur event occurs when the user moves the focus away from the form element
- input.addEventListener('blur', () => alert('blurred'), false); 
-
-/The change event occurs when the user moves the focus away from the form elementafter changing it.
- input.addEventListener('change', () => alert('changed'), false); 
+//another way
+//const input = form['searchInput']; 
 
 
-*/
+/*------------------- ANIMATIONS------------------ */ 
+const squareElement = document.getElementById('square');
+let angle = 0;
+setInterval( () => {
+    angle = (angle + 2) % 360;
+    squareElement.style.transform = `rotate(${angle}deg)`
+}, 1000/60);
 
   </script>  
 </body>
