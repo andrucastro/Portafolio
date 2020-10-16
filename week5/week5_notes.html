@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function unicorn(){
+            console.log('test')
+        }
+        function three(){ unicorn(); }
+function two(){ three(); }
+function one(){ two(); }
+one();
+
+if (window.holoDeck) {
+    virtualReality.activate();
+}
+
+function amIOldEnough(age){
+    if (age < 12) {
+        alert(age);
+        return 'No, sorry.';
+    } else if (age < 18) {
+        return 'Only if you are accompanied by an adult.';
+    }
+    else {
+        return 'Yep, come on in!';
+    }
+}
+
+amIOldEnough(21)
+ 
+
+    </script>
+</body>
+</html>
