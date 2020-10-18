@@ -5,35 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<style>
+    h2{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-left: 2em;
+    }
+
+    p,h1,ul{
+        margin-left: 2em;
+    }
+</style>
+
+<h1> Notes </h1>
+<h2>Errors, Exceptions, and Warnings</h2>
+<ul>
+    <li>System error</li>
+    <li>Programmer error</li>
+    <li>User error </li>
+</ul>
+
+<p>Programmer errors are our responsibility, so we must ensure they are minimized as much as possible and fixed promptly</p>
+<p>It might even be argued that user errors are in fact also programmer errors, because the program should be designed in a way that prevents the user from making the error.</p>
+
+<h2>Stack Traces</h2>
+<p>A stack trace will work backwards from the point at which the error occurred to identify the original function or method that started the sequence. </p>
+
+<h2>Strict Mode</h2>
+<p>Strict mode encourages a better quality of JavaScript to be written that befits a ninja programmer, so its use is recommended.</p>
+
+<h2>Linting Tools</h2>
+<p>This is particularly useful when you are working in a team, as it ensures everybody follows the same conventions.</p>
+
+<h2>Feature Detection</h2>
+<p>Use an if statement to evaluate if the browser support an specific API or method.</p>
+<p> if (window.holoDeck) {<br>
+    virtualReality.activate();<br>
+}
+</p>
 <body>
     <script>
         
-        function unicorn(){
-            console.log('test')
-        }
-        function three(){ unicorn(); }
-function two(){ three(); }
-function one(){ two(); }
-one();
+    //--------------- TRY, CATCH, FINALLY-------------------
+    
+    /*
+    1) "try" contains the part of sections of the code that we wanto to evaluate
+    2) "catch" if there is an error inside the "try" block, this section will catch the error and will do something ( the error will not display in console)
+    3) "Finally" will execute an action after the code inside the block "try "runs", even if there is found an error or not     
+   */
 
-if (window.holoDeck) {
-    virtualReality.activate();
-}
 
-function amIOldEnough(age){
-    if (age < 12) {
-        alert(age);
-        return 'No, sorry.';
-    } else if (age < 18) {
-        return 'Only if you are accompanied by an adult.';
-    }
-    else {
-        return 'Yep, come on in!';
-    }
-}
+   /* CASE 1 the variable number is not a number*/
+   try{
 
-amIOldEnough(21)
- 
+    let number = "as";
+    // evaluate if the variable number us a number  
+    if(isNaN(number)){    
+        //message to identify the error 
+        throw new Error ("create the error");
+    } 
+    // if this is a number do this math and display the result in console 
+    console.log(number*number)
+   }
+   // if is not right diplay this message 
+   catch(error){
+    console.log('This is not a number');
+   }
+
+
+   /* CASE 2 the variable number is not a number*/
+   try{
+   let number2= 10;
+   if(isNaN(number2)){    
+        //message to identify the error 
+        throw new Error ("create the error");
+    } 
+    // if this is a number do this math and display the result in console 
+    console.log(number2*number2)
+   }
+   // if is not right diplay this message 
+   catch(error2){
+    console.log('This is not a number');
+   }
 
     </script>
 </body>
