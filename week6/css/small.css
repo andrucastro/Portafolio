@@ -5,6 +5,9 @@ font-family: 'Raleway', sans-serif;
 
 */
 
+
+/**************** LAYOUT APP **************** 
+****************             *************** */
 *{
     margin: 0;
     padding: 0;
@@ -12,10 +15,12 @@ font-family: 'Raleway', sans-serif;
 }
 
 header{
-    width: 100%;
+    width: 95%;
     height: 180px;
     background-color: blueviolet;
     position: relative;
+    border-radius: 20px 20px 0 0;
+    margin: 10px auto;
 }
 
 h1{
@@ -27,7 +32,7 @@ h1{
 form{
     width: 100%;
     padding: 0.7em;
-    background-color:sienna;
+    border-top: solid 2px gray;
     position: fixed;
     bottom: 0%;
     display: flex;
@@ -37,16 +42,61 @@ form{
 border: teal 1px solid;
 }
 
+/* input text */
 input{
-font-size: 20px;    
+font-size: 23px;    
 width: 100%;
 padding: 0.3em;
 border: none;
 }
 
+/* button to add new task  */
 form button{
     border: none;
-    font-size: 29px;
+    font-size: 35px;
     cursor: pointer;
     margin: 0%;
+    background-color:white ;
+}
+
+/**************** ITEMS STYLES **************** 
+****************               *************** */
+
+.list_Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo_list{
+    width: 95%;
+    list-style: none;
+}
+
+/* itmen block style */
+.todo{
+    padding: ;
+    border-bottom: 1px solid gray;
+    color: black;
+    font-size: 1.5rem;
+    display:flex;
+    margin: 0.5em 0;
+    position: relative;
+    
+}
+
+.complete-btn, .delete-btn{
+    color:rgb(21, 199, 30);
+    border: none;
+    background-color: white;
+    font-size: 28px;
+    margin-right: 12px;
+    margin-bottom: 8px;
+}
+
+.delete-btn{
+    color:rgb(245, 35, 35);
+    margin-left: 8px;
+    position: absolute;
+    right: 0;
 }
