@@ -65,8 +65,9 @@ function delete_chek(e){
      //DELTE iTEM   
     if(item.classList[0] ==='delete-btn'){
         const todo = item.parentElement;
-        todo.classList.add('no_complete')
         remove_deleted_task_from_localStorage(todo);
+
+        todo.classList.add('out')
         todo.remove()
     }
 
@@ -160,7 +161,7 @@ function getTask(){
     })
 }
 
-// Delete tasks deleted and stored in the local storage
+// Delete taks deleted storaged in the local storage
 function remove_deleted_task_from_localStorage(todo){
    
     let storedTask;
