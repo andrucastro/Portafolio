@@ -11,6 +11,13 @@
 <body>
     <header>
         <h1> To do list </h1>
+        <div class="select">
+            <select name="All-tasks" class="filter">
+                <option value="all">All</option>
+                <option value="completed">completed</option>
+                <option value="uncompleted">uncompleted</option>
+            </select>
+        </div>
     </header>
     <div class="list_Container">
         <ul class="todo_list"></ul>
@@ -21,7 +28,6 @@
             <i class="fas fa-plus-circle"></i>
         </button>
     </form>
-    
         
     <script src="app.js"></script>
     <script src="https://use.fontawesome.com/5dd0ca7917.js"></script>
