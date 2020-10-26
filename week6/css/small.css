@@ -110,14 +110,12 @@ select:focus{
 
 /* itmen block style */
 .todo{
-    padding: ;
     border-bottom: 1px solid gray;
     color: black;
     font-size: 1.5rem;
     display:flex;
     margin: 0.5em 0;
     position: relative;
-    animation: ;
     
 }
 
