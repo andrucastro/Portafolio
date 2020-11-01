@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Week 7 notes</h1>
+    <h3>Open the console and browse the sources to see the notes</h3>
+    <script>
+         
+        /*"--------------UNSING CALL METHOD----------- "*/
+
+        //object person thtat contains method "say hello"
+         const person = {
+             sayhello: function() {
+                 //in this cintext the work "this" makes reference to the object "manuel" 
+                 console.log( this.name)
+                 
+             }
+         }
+
+         // object manuel wiht the attribute manuel. 
+         const manuel = {
+             name: "manuel"
+         };
+
+         // call the method "sayhello" with a parameter taken from an external object
+         person.sayhello.call(manuel);
+
+
+
+        /*"--------------IMMEDIATELY INVOKED FUNCTION EXPRESSION ----------- "*/
+            
+        (function add( n1, n2) {
+            console.log(' this is an autoInvoked funtion')
+            console.log( n1 + n2)
+        })(4,6)
+
+        /* -------------- FUNTIONS THAT DEFINE AND REWRITE THEMSELVES ----------- */
+
+                function party(){
+            console.log('Wow this is amazing!');
+            party = function(){
+                console.log('Been there, got the T-Shirt');
+            }
+        }
+
+        /* ------------------------ PROMISES  --------------------- */
+
+        // example 1
+
+        const p  = new Promise (function(resolve,reject){
+            // declare the promise 
+            let add = 2 + 6;
+            // Evaluate if the promise is fulfilled or not
+            if(add === 8){
+                resolve("correct!")
+            }else{
+                reject("error")
+            }
+        });
+        
+        // if the promise is fulfilled, continue with this 
+        p.then(function(message){   
+            console.log(message);
+        }).catch(function(error) {
+            console.log(error)
+            
+        })
+
+         // example 2
+
+         function miPromise(){
+             return new Promise(function(resolve,reject){
+                 let  winer = true;
+
+                 if( winer === true){
+                     winerPrize = {
+                         owner: "andres",
+                         prize: "1000$"
+                     }
+                     resolve(winerPrize);
+                 }else{
+                     reject(" Thanks for participating")
+                 }
+             });   
+         }
+         miPromise().then(function(message){   
+            console.log(message);
+        }).catch(function(error) {
+            console.log(error)
+            
+        })
+
+         /* --------------- FUNTCIONS AND RETURN FUNCTIONS ------------ */
+
+         // exmaple 1
+         function returnHello() {
+            console.log('returnHello() called');
+            return function() {
+                console.log('Hello World!');
+            }
+        }
+         const hello = returnHello();
+
+         hello();
+
+                function greeter(greeting = 'Hello') {
+            return function() {
+                console.log(greeting);
+            }
+        }
+            const englishGreeter = greeter();
+            englishGreeter();
+            
+            //change the content of the message defining a new parameter
+            const frenchGreeter = greeter('Bonjour');
+            frenchGreeter();
+
+            //change the content of the message defining a new parameter
+            const germanGreeter = greeter('Guten Tag');
+            germanGreeter();
+
+           
+            /* --------------- CCLOSURE ------------ */
+
+            function closure() {
+                const a = 1.8;
+                const b = 32;
+                // this arrow funtion have access to the variables a and b defined inside the funtions closure()
+                return c => c * a + b;
+            }
+
+            const toFahrenheit = closure();
+            toFahrenheit(30);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #pokeapi{
+        width: 80%;
+        margin:2em auto;
+        background-color: rgb(218, 218, 218);
+        text-align: center;
+        padding: 1em;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    div:nth-child(2){
+        width: 80%;
+        margin:2em auto;
+        background-color: rgb(218, 218, 218);
+        padding: 1em;
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    div:nth-child(2) button{
+
+        border: none;
+        outline: none;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: rgb(105, 22, 160);
+        color: white;
+        font-size: large;
+    }
+
+    form{
+        width: 80%;
+        margin:2em auto;
+        background-color: rgb(218, 218, 218);
+        padding: 1em;
+        text-align: center;
+    }
+
+
+</style>
+
+<body>
+    <div id="display"></div>
+<div>
+    <button id='number'>Number Fact</button>
+    <button id='chuck'>Chuck Norris Fact</button>
+    <div id='output'>
+        Ajax response will appear here
+    </div>
+</div>
+ 
+    <form id='todo' action='https://jsonplaceholder.typicode.com/todos' method='POST'>
+        <input type='text' name='task'  placeholder='Add Task' autofocus required>
+        <button type='submit'>Add Task</button>
+    </form>
+    <script>
+
+
+/* Get a pokemon from the API pokeapi, suind fetch */ 
+
+        const url = "https://pokeapi.co/api/v2/pokemon/1"; 
+        fetch(url)
+        .then(response => response.json() )
+        // The parameter data is the response of the function response  
+        .then(data => {
+
+            let element = document.getElementById('display')
+
+            element.innerHTML = `
+
+            <div id="pokeapi" >
+            <h1> Poke API</h1>    
+            <h2> ${data.name}</h2>   
+            <img src = '${data.sprites.back_default}' />
+            <img src = '${data.sprites.front_default}' />
+            <img src = '${data.sprites.front_shiny}' />
+            <p>  Height: ${data.weight}</p>
+            <p>  Weight: ${data.height}</p>
+            </div>
+            `
+
+        })
+        .catch(err => console.log(err));
+
+        fetch(url)
+        .then( response => response.json() ) // transforms the JSON data into a JavaScript object
+        .then( data => console.log(Object.entries(data)) )
+        .catch( error => console.log('There was an error: ', error))
+
+
+
+    /*-----------------------AJAX EXAMPLE-----------------------*/
+    
+    const textButton = document.getElementById('number');
+    const apiButton = document.getElementById('chuck');
+    const outputDiv = document.getElementById('output');
+    const textURL = 'http://numbersapi.com/random';
+    const apiURL = 'https://api.chucknorris.io/jokes/random';
+    
+    //Number Fact button
+        textButton.addEventListener('click', () => {
+        fetch(textURL)
+        .then( response => {
+            outputDiv.innerHTML = 'Waiting for response...';
+        if(response.ok) {
+            return response;
+        }
+            throw Error(response.statusText);
+        })
+        .then( response => response.text() )
+        .then( text => outputDiv.innerText = text )
+        .catch( error => console.log('There was an error:', error))
+    },false);
+
+
+    //Chuck Norris Fact button
+    apiButton.addEventListener('click', () => {
+        fetch(apiURL)
+        .then( response => {
+            outputDiv.innerHTML = 'Waiting for response...';
+        if(response.ok) {
+            return response;
+        }
+        throw Error(response.statusText);
+        })
+        .then( response => response.json() )
+        .then( data => outputDiv.innerText = data.value )
+        .catch( error => console.log('There was an error:', error))
+    },false);
+
+
+    // todo list 
+    const form = document.forms['todo'];
+form.addEventListener('submit', addTask, false);
+function addTask(event) {
+    event.preventDefault();
+    const number = form.task.value;
+    const task = {
+        userId: 1,
+        title: form.task.value,
+        completed: false
+    }
+    const data = JSON.stringify(task);
+    const url = 'https://jsonplaceholder.typicode.com/todos';
+    const headers = new Headers({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    });
+    const request = new Request(url,
+    {
+        method: 'POST',
+        header: headers,
+        body: data
+    }
+    )
+    fetch(request)
+    .then( response => response.json() )
+    .then( task => console.log(`Task saved with an id of ${task.id}`) )
+    .catch( error => console.log('There was an error:', error))
+}
+
+    </script>
+</body>
+</html>
