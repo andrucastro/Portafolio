@@ -1,0 +1,104 @@
+
+body{
+    padding-left: 2em;
+}
+div{
+    width: 100px;
+    height: 50px;
+    background-color: cornflowerblue;
+    margin: 1em;
+    text-align: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* Tranformation */
+
+.translation:hover{
+    transform: translateX(100px);   
+}
+
+.scale:hover{
+background-color: crimson;
+transform:scale(1.3);
+
+}
+
+.rotation:hover{
+transform: rotate(100deg)
+}
+
+.skew:hover{
+transform:skew(20deg, 8deg)  
+}
+
+/* Transitions */
+
+.transition{
+    background-color: crimson;
+    transform: translateX(500px);
+    transition-duration: 1000ms;
+} 
+
+
+#ease{
+    transition-timing-function: ease;
+    
+}
+#ease-in{
+    transition-timing-function: ease-in;
+    
+}
+#ease-out{
+    transition-timing-function: ease-in-out;
+    
+}
+#ease-in-out{
+    transition-timing-function: ease-out;
+    
+}
+#linear{
+    transition-timing-function: linear;
+   
+}
+/* Animation */
+
+#play{
+    width: 100px;
+    height: 100px;
+    margin-left: 100px ;
+    background-color: goldenrod;
+    border-radius: 50px 50px 50px;
+    position: relative;
+}
+
+.lanzar{
+    animation-name: ball;
+    animation-duration: 5000ms;
+}
+
+@keyframes ball{
+    0%{ right: 0; animation-timing-function:ease-in}
+    30%{ right: 150px; width: 120px; height: 90;}
+    50%{ right: -600px; width: 100px; height: 100px; animation-timing-function:ease-in}
+    100%{ right: 0; width: 100px; height: 100px; animation-timing-function:ease-in}
+
+}
+
+/* Canvas */
+
+.myCanvas {
+    border: dotted 2px black;
+}
+
+.demo2{
+    
+    border: solid 2px black;
+    margin: 0 20px;
+}
+
+.spin {
+    position: absolute;
+    top: 8px;
+    left: 55px;
+}
+
