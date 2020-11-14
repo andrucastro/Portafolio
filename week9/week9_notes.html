@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>week9 Notes</h1>
+   <p> Please open the surce fiel and console to see more notes </p>
+   <p> Enable the notifications</p>
+    <h2>Video test</h2>
+    <video id="coldplay" src="../videoplayback.mp4" controls>
+        Your browser does not support the video element.
+    </video>
+    <br><br>
+    <button id="chorus">chorus</button><button id="speed">speed up</button>
+    <br><br>
+    <div id='hero' data-powers='flight superSpeed'>
+        Superman
+    </div>
+    <div id="example_data" data-sound='tiiiiinnnnn!!!'> Data exmaple andres</div>
+
+    <script>
+
+        // .................................DATA ATRIBUTE....................................//
+
+        const superman = document.getElementById('hero');
+        const powers = superman.dataset.powers;
+        const example_data = document.getElementById('example_data');
+
+        /* use dataset to callt he data tribute from the element*/
+        const sound = example_data.dataset.sound
+
+        /* Diplay the data of each elemnt in the console*/
+        console.log(powers, sound)
+
+
+        //................................ LOCAL STORAGE....................................//
+
+        /* save items, use setItem() */
+
+        let name = "andres"
+        localStorage.setItem("key", name)
+
+        /* get items from local storage use gettItem() */
+
+        let getTheName = localStorage.getItem("key")
+        document.write( "hey! I am fetching this from local storage: " + getTheName + "<br>")
+
+        /* clean the local storage*/ 
+        localStorage.clear();
+
+        /* store an object */
+
+        const andres = {
+            height: 1.73, 
+            age: 23,
+            weight: 60,
+            name: "andres",  
+        } 
+
+        localStorage.setItem("object", JSON.stringify(andres))
+
+        /* get the object from local storage */
+
+        const object = JSON.parse(localStorage.getItem("object"))
+        document.write( "hey! I am fetching this object from local storage: " + object.age)
+
+        //............................... GEOLOCATION........................................//
+
+
+        navigator.geolocation.getCurrentPosition(youAreHere); 
+
+        function youAreHere(position) {
+            
+         console.log(`Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`); 
+
+        }
+        //............................... NOTIFICATION ........................................//
+
+        /* Request permition for notification */
+            if(window.Notification) {
+        Notification.requestPermission()
+        .then((permission) => {
+            /* If the notification is accepted do the next:  */
+            if(Notification.permission === 'granted') {
+            new Notification('This is a test notification');
+            }
+        });
+    }
+
+    /* Notification constructor */
+    const notification = new Notification('JavaScript: Novice to Ninja',{
+    body: 'The new book from SitePoint',
+});
+
+ const btn_chorus = document.getElementById('chorus');
+ const btn_speed = document.getElementById('speed');
+ const video = document.getElementById('coldplay');
+ 
+ btn_chorus.addEventListener('click', () => { 
+   video.currentTime = 110; 
+    
+});
+
+btn_speed.addEventListener('click', () => { 
+    
+    video.playbackRate = 2;
+    
+});
+
+    </script>
+</body>
+</html>
