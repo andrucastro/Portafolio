@@ -27,7 +27,7 @@ width: 70%;
 .options{
     margin: 0 auto; 
     width: 80%;
-    height: 22em;
+    height: 20em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +37,8 @@ width: 70%;
 height: 160px;
 }
 
+
+/*---------------- BUTTONS------------------*/ 
 
 .btn-continue{
 display: block;
