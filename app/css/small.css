@@ -52,7 +52,7 @@ height: 160px;
 }
 
 .policies{
-    margin: 1em 1em;
+    margin: 1.5em 1em;
     height: 300px;
     border: solid 2px black;
     padding: 1em;
@@ -212,8 +212,8 @@ td {
   }
 
 input[type="checkbox"]{
- position: relative;    
+ text-align: center;
  display: block;
- margin:0 0 3em;  
+ margin:0 auto 3em;  
  height: 30px;
 }
