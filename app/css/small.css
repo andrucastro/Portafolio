@@ -10,11 +10,6 @@ padding:3.5em 1em;
 font-size: 16px;
 }
 
-h1{
-font-family: 'Questrial', sans-serif; 
-text-align: center;
-margin: 0;
-}
 
 .sub-text{
 margin: 10px auto;    
@@ -54,6 +49,13 @@ height: 160px;
 
 /*---------------- HEADINGS------------------*/
 
+
+h1{
+    font-family: 'Questrial', sans-serif; 
+    text-align: center;
+    margin: 0;
+    }
+
 .customer-information{
 font-weight: 300;
 font-size: 1.6em;
@@ -66,6 +68,11 @@ font-weight: 10;
 
 .welcome-to-adidas-services #bold{
     font-weight: 1000;
+}
+
+.change-my-order{
+    font-size: 1.7em;
+    font-weight: 10;
 }
 
 
