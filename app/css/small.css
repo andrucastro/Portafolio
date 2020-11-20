@@ -10,6 +10,10 @@ padding:3.5em 1em;
 font-size: 16px;
 }
 
+.body-backgorund{
+background:url(/app/img/adidas-background.jpg) no-repeat fixed center;
+background-size: cover;
+}
 
 .sub-text{
 margin: 10px auto;    
@@ -47,6 +51,21 @@ height: 160px;
  padding: 2em 1em;
 }
 
+.policies{
+    margin: 1em 1em;
+    height: 300px;
+    border: solid 2px black;
+    padding: 1em;
+    background-color: #EFEFEF;
+    overflow: scroll;
+}
+
+.policies p{
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: large; 
+}
 /*---------------- HEADINGS------------------*/
 
 
@@ -75,6 +94,12 @@ font-weight: 10;
     font-size: 1.7em;
     font-weight: 10;
 }
+
+.returns-refund-policies{
+    font-size: 1.7em;
+    font-weight: 200;
+}
+
 
 /*----------------SUB HEADINGS--------------------*/
 
@@ -168,4 +193,21 @@ input{
 @keyframes appear{
 0%{bottom:-50px; opacity: 0;}
 100%{bottom:1px; opacity:1;}    
+}
+
+
+/*---------------- Checkbox------------------*/ 
+label[for="rr-agree"]{
+margin: 1em;
+display: block;
+font-family: 'Quicksand', sans-serif;
+font-size: 1.4em;
+font-weight: 500;
+text-align: center;
+}
+
+input[type="checkbox"]{
+ display: block;
+ margin:0 auto 3em;  
+ height: 30px;
 }
