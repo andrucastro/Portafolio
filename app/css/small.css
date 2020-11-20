@@ -207,6 +207,7 @@ text-align: center;
 }
 
 input[type="checkbox"]{
+ position: relative;    
  display: block;
  margin:0 auto 3em;  
  height: 30px;
