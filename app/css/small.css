@@ -214,6 +214,6 @@ td {
 input[type="checkbox"]{
  text-align: center;
  display: block;
- margin:0 auto 3em;  
+ margin: 0 15% 3em;  
  height: 30px;
 }
