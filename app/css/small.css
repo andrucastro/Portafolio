@@ -53,6 +53,7 @@ height: 160px;
 h1{
     font-family: 'Questrial', sans-serif; 
     text-align: center;
+    position: relative;
     margin: 0;
     }
 
@@ -75,6 +76,11 @@ font-weight: 10;
     font-weight: 10;
 }
 
+/*----------------SUB HEADINGS--------------------*/
+
+P{
+position: relative;
+}
 
 /*---------------- BUTTONS------------------*/ 
 
@@ -109,6 +115,7 @@ text-decoration: none;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 2.5em;
+    text-decoration: none;
 }
 /*----------------logoS--------------------*/
 
@@ -150,4 +157,15 @@ input{
     font-family: 'Quicksand', sans-serif;
     font-size: 12px;
     width: 270px;
+}
+
+.animation{
+    animation-name: appear;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes appear{
+0%{bottom:-50px; opacity: 0;}
+100%{bottom:1px; opacity:1;}    
 }
