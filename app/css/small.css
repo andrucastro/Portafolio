@@ -34,7 +34,6 @@ font-size: 1.2em;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: green;
 }
 
 .container-center img{
@@ -62,7 +61,7 @@ font-size: 1.6em;
 
 .welcome-to-adidas-services{
 font-size: 1.7em;
-font-weight: 50;
+font-weight: 10;
 }
 
 .welcome-to-adidas-services #bold{
