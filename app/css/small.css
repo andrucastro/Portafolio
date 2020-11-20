@@ -61,6 +61,7 @@ font-size: 1.6em;
 }
 
 .welcome-to-adidas-services{
+font-size: 1.7em;
 font-weight: 50;
 }
 
@@ -89,13 +90,19 @@ text-decoration: none;
 }
 
 .btn-option{
-    width:80%;
     color: white;
     padding:1em ;
-    margin-bottom: 2.5em;
     background-color: black;
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
+}
+
+.btn-option-link{
+    margin:0;
+    padding:0;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2.5em;
 }
 /*----------------logoS--------------------*/
 
