@@ -59,6 +59,10 @@ font-weight: 700;
 font-size: 1.1em;
 }
  
+
+.btn-continue-link{
+text-decoration: none;
+}
 /*----------------logo--------------------*/
 
 .small-logo{
@@ -87,7 +91,7 @@ form{
 
 input{
     margin-bottom:1em ;
-    border-radius: 20px;
+    border-radius: 10px;
     display: block;
     outline: none;
     border: solid 1px black;
