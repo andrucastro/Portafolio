@@ -13,7 +13,7 @@ font-size: 16px;
 h1{
 font-family: 'Questrial', sans-serif; 
 text-align: center;
-margin: 1.8em 0 0;
+margin: 1.3em 0 0;
 }
 
 .sub-text{
@@ -53,3 +53,21 @@ font-weight: 700;
 font-size: 1.1em;
 }
  
+
+/*---------------- FORM------------------*/ 
+
+form{
+    background-color: #DDDDDD;
+    padding: 2em 1em;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    margin-bottom:1em ;
+    border-radius: 20px;
+    display: block;
+}
