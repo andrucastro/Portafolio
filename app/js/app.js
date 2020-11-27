@@ -18,7 +18,8 @@ const validateForm  = (e) =>{
         //evaluate the infueld "userName" input acornding the regular expression userName"
            if(expresiones.userName.test(e.target.value)){
             //change the color of the imput
-            document.querySelector('.non_display_error_alert').classList.remove('display_error-alert')       
+            document.querySelector('.non_display_error_alert').classList.remove('display_error-alert')
+            document.querySelector('.non_display_error_alert').innerHTML="<p>Please enter only letters and numbers</p>"      
             document.getElementById('userName').classList.remove('form_inputerror')
             document.getElementById('userName').classList.add('form_inputValid')
            } else{

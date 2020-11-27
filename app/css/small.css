@@ -162,7 +162,7 @@ text-decoration: none;
 
 .display_error-alert{
     height:1em;
-    padding:0.5em;
+    padding:1em;
     margin: 0.8em -1em;
     width:60%;
     background-color: rgb(233, 34, 34);
@@ -170,6 +170,9 @@ text-decoration: none;
     font-family: 'Quicksand', sans-serif; 
     display: flex;
     align-items: center;
+    -webkit-box-shadow: 10px 10px 16px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 16px -8px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 16px -8px rgba(0,0,0,0.75);
 }
 
 form{
