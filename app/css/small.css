@@ -138,7 +138,7 @@ text-decoration: none;
     margin:0;
     padding:0;
     width: 80%;
-    margin: 0 auto;
+    margin:auto;
     margin-bottom: 2.5em;
     text-decoration: none;
 }
@@ -156,10 +156,26 @@ text-decoration: none;
 
 /*---------------- FORM------------------*/ 
 
+.non_display_error_alert{
+  display: none;
+}
+
+.display_error-alert{
+    height:1em;
+    padding:0.5em;
+    margin: 0.8em -1em;
+    width:60%;
+    background-color: rgb(233, 34, 34);
+    color: white;
+    font-family: 'Quicksand', sans-serif; 
+    display: flex;
+    align-items: center;
+}
+
 form{
-    margin-top: -20px;
+    margin-top: 30px;
     background-color: #DDDDDD;
-    padding: 2em 1em;
+    padding: 1.5em 1.2em;
     border-radius: 20px;
     width: 100%;
     display: flex;
@@ -167,13 +183,27 @@ form{
     justify-content: center;
     align-items: center;
 }
+/*validation form*/
+.form_inputerror{
+    
+    color:red;
+    outline: red;
+    border: solid 1px red;
+}
+
+.form_inputValid{
+    
+    outline: rgb(9, 109, 240);
+    border: solid 1px rgb(9, 109, 240);
+    color: black;
+}
 
 #orderNumber{
     margin: 0;
 }
 
 input{
-    margin-bottom:1em ;
+    margin-bottom:1em;
     border-radius: 10px;
     display: block;
     outline: none;
@@ -182,6 +212,10 @@ input{
     font-family: 'Quicksand', sans-serif;
     font-size: 12px;
     width: 270px;
+}
+
+form #submit-btn{
+    margin-top:40px; 
 }
 
 .animation{
