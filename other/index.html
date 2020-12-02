@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="https://formspree.io/f/mrgoalvp" method="POST" name="user-data" id="formulario">
+    <div>
+        <label for="usaerName">  
+            <input type="text" name="usaerName" placeholder="Name" id="userName">
+        </label>
+    </div>
+        <label for="lastName">
+            <input type="text" name="lastName" placeholder="Last Name" id="lastName" >
+        </label>
+        <label for="userEmail">
+            <input type="email" name="userEmail" placeholder="email" id="userEmail">
+        </label>
+        <label for="orderNumber">
+            <input type="number" name="orderNumber" placeholder="Order number" id="orderNumber">
+        </label>
+        <div class="non_display_error_alert">
+        </div>
+        <label for="submit-btn">
+            <button type="submit" class="btn-continue" id="submit-btn">continue</button>
+        </label>
+    </form>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+
+  function sendEmail() {
+	Email.send({
+  SecureToken :"ef86f175-3efb-431d-b8fb-c5945e32b73b",
+	To : 'pagosandrescastro@gmail.com',
+	From : "guevaracastroandres@gmail.com",
+	Subject : "iwerjhiweoir",
+	Body : "intento 3",
+	}).then(
+		message => alert(message)
+	);
+}
+
+
+sendEmail();
+
+</script>
+</body>
+</html>
