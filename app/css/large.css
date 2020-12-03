@@ -1,8 +1,8 @@
 @media only screen and (min-width: 800px) {
-    body{
+    .large-view-mainContainer{
+        display: block;
         display:grid;
         grid-template-columns: 40% 60%;
-    
     }
 
   
