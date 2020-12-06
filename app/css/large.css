@@ -23,5 +23,22 @@
     }
 
 
+    /*Forms*/
+    #billing-informaiton{
+        width: 60%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #billing-informaiton input{
+        margin: 1em auto ;
+        width: 80%;
+    }
+
+    #billing-informaiton label:last-child{
+        grid-column: span 2;
+        display: flex;
+        justify-content: center;
+    }
 
   }
