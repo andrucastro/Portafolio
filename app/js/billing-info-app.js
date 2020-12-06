@@ -97,12 +97,20 @@ formulario.addEventListener('submit', (e) =>{
         order_number: document.getElementById('orderNumber').value
      } 
 
-     console.log(user_info);
+     //display modal window 
+     let billing_information_modal = document.querySelectorAll(".billing_information_modal")[0];
+     let modal = document.querySelectorAll('modal')[0];
+     
+     billing_information_modal.style.visibility = "visible";
+
+   
  }
+ 
  else{
     document.querySelector('.form_error_submit').classList.add('display_error_submit');
     setTimeout(()=>{
         document.querySelector('.form_error_submit').classList.remove('display_error_submit');
     },4000)
  }
+
 }) 

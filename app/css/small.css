@@ -243,3 +243,46 @@ input[type="checkbox"]{
  margin:0;
  padding:0;
 }
+
+/*---------------- modal window------------------*/ 
+
+.billing_information_modal{
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.541);
+    top: 0;
+    left: 0;
+}
+
+    
+.modal{
+    width: 80%;
+    height: 70%;
+    background-color:white;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    animation-name:appear-moda ease-in 1s;
+}
+
+@keyframes appear-modal{
+    0%{transform: translateY(-200%);}
+    100%{transform: translate(0%);}    
+    }
+
+.modal h2{
+    font-family:'Questrial', sans-serif;
+}
+
+.modal button{
+margin-top: 25%;
+}
+.modal-close{
+    transform: translateY(-200%)
+}
