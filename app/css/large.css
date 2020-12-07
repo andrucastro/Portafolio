@@ -41,4 +41,20 @@
         justify-content: center;
     }
 
+
+
+    /*------------------ MODAL--------------------*/
+
+    .modal{
+       width: 60%;
+    }
+
+    #submit_request{
+        display: block;
+    }
+
+     #make_call{
+         display: none;
+     }
+
   }

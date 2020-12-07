@@ -76,13 +76,14 @@ if(expresion.test(input.value)){
     }
 }
 
-
+// validate field every time user type 
 inputs.forEach((input) => {
     input.addEventListener('keyup', validateForm);
     input.addEventListener('blur', validateForm);
 });
 
 
+// event listener form submission
 formulario.addEventListener('submit', (e) =>{
  e.preventDefault();
 
@@ -96,14 +97,22 @@ formulario.addEventListener('submit', (e) =>{
         billing_address: document.getElementById('billing-address').value,
         order_number: document.getElementById('orderNumber').value
      } 
+        
+  // display the content in the modal window    
+     document.getElementById("user_name").innerHTML = " " + user_info.user_name;
+     document.getElementById("last_name").innerHTML = " " + user_info.last_name;
+     document.getElementById("user_email").innerHTML = " " + user_info.email;
+     document.getElementById("user_id").innerHTML = " " + user_info.id;
+     document.getElementById("user_billing_address").innerHTML = " " + user_info.billing_address;
+     document.getElementById("user_order_number").innerHTML = " " + user_info.order_number;
+  
 
-     //display modal window 
+     //make visible the modal window.. 
      let billing_information_modal = document.querySelectorAll(".billing_information_modal")[0];
-     let modal = document.querySelectorAll('modal')[0];
-     
      billing_information_modal.style.visibility = "visible";
 
-   
+ 
+
  }
  
  else{
