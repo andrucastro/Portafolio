@@ -107,12 +107,21 @@ formulario.addEventListener('submit', (e) =>{
      document.getElementById("user_order_number").innerHTML = " " + user_info.order_number;
   
 
+       //disapear modal 
+       const modal_out = document.querySelectorAll('.billing_information_modal')[0];
+       modal_out.addEventListener("click", () =>{
+            billing_information_modal.style.visibility = "hidden";
+          modal_out.classList.add('close-modal')
+        
+       })
+
      //make visible the modal window.. 
      let billing_information_modal = document.querySelectorAll(".billing_information_modal")[0];
+     modal_out.classList.remove('close-modal')
      billing_information_modal.style.visibility = "visible";
 
- 
 
+ 
  }
  
  else{
