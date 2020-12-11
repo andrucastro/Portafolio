@@ -15,7 +15,7 @@
         <img src="../app/img/adidas-logo.jpg" alt="logo-adidas" class="small-logo animation">
         <h1 class="billing-information animation" id="billing-info-heading">Billing Information</h1>
         <section class="container-center">
-            <form action="" name="billing-informaiton" id="billing-informaiton">
+            <form action="" name="billing-informaiton" class="form-request-style" id="billing-informaiton">
                 <label for="userName">  
                     <input type="text" name="userName" placeholder="Name" id="userName">
                 </label>
@@ -44,7 +44,7 @@
                 </label>
             </form>
         </section>
-        <div class="billing_information_modal">
+        <div class="container_modal">
             <div class="modal">       
                <h2>Confirm Your Information</h2>         
                 <p>Name: <span id="user_name"></span></p>
@@ -57,7 +57,9 @@
                 <button class="btn-continue" id="submit_request">submit Request</button>
             </div>
         </div>
-    <script src="https://kit.fontawesome.com/afd6c7ce26.js" crossorigin="anonymous"></script>
-   <script src="../app/js/billing-info-app.js"></script>
+    <script src="https://kit.fontawesome.com/afd6c7ce26.js" crossorigin="anonymous"></script><!-- Font awespme incons -->
+   <script src="../app/js/billing-info-app.js"></script><!-- app script  -->
+   <script src="https://smtpjs.com/v3/smtp.js"></script><!-- email Api link -->
+
 </body>
 </html>

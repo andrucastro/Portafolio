@@ -24,23 +24,22 @@
 
 
     /*Forms*/
-    #billing-informaiton{
+    .form-request-style{
         width: 60%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
     }
 
-    #billing-informaiton input{
-        margin: 1em auto ;
-        width: 80%;
+    .form-request-style input{
+        margin: 1em auto !important ;
+        width: 80% !important;
     }
 
-    #billing-informaiton label:last-child{
+    .form-request-style label:last-child{
         grid-column: span 2;
-        display: flex;
-        justify-content: center;
+        display: flex !important;
+        justify-content: center !important;
     }
-
 
 
     /*------------------ MODAL--------------------*/
@@ -51,10 +50,24 @@
 
     #submit_request{
         display: block;
+        cursor: pointer;
     }
 
      #make_call{
          display: none;
      }
 
+ /*------------------ MODAL--------------------*/
+
+     .submited_page img{
+         display: block;
+         width: 50%;
+         margin: 0 auto;
+     }
+
   }
+
+
+
+     
+

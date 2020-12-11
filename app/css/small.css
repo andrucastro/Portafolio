@@ -16,7 +16,7 @@ background-size: cover;
 }
 
 .sub-text{
-margin: 10px auto;    
+margin: 10px auto 30px;    
 text-align: center;
 padding: 0;
 font-family: 'Quicksand', sans-serif;
@@ -87,6 +87,16 @@ h1{
     margin: 0;
     }
 
+h2{
+    font-family: 'Questrial', sans-serif; 
+    text-align: center;
+}
+
+.headings-general{
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
 .customer-information{
 font-weight: 300;
 font-size: 1.6em;
@@ -117,13 +127,23 @@ font-weight: 10;
     margin-bottom: 2em;
 }
 
+
 /*----------------SUB HEADINGS--------------------*/
 
 P{
 position: relative;
 }
 
+/*----------------Text--------------------*/
+
+p{
+font-family: 'Quicksand', sans-serif; ;  
+}
+
 /*---------------- BUTTONS------------------*/ 
+a{
+    text-decoration: none;
+}
 
 .btn-continue{
 display: block;
@@ -162,7 +182,7 @@ text-decoration: none;
 
 .small-logo{
     height: 50px;
-    margin: 0  auto 3em;
+    margin: 0 auto 2em;
     display: block;
 }
 
@@ -170,10 +190,10 @@ text-decoration: none;
     height: 160px;
 }
 
-
+/*------------FORMS----------------*/
 
 form{
-    margin-top: 30px;
+    margin-top: 6em;
     background-color: #DDDDDD;
     padding: 1.5em 1.2em;
     border-radius: 20px;
@@ -201,9 +221,51 @@ input{
     width: 270px;
 }
 
+@media screen and (max-width: 360px ){
+    
+    input{
+        margin-bottom:1em;
+        border-radius: 10px;
+        display: block;
+        outline: none;
+        border: solid 1px black;
+        padding: 1em 1.4em ;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 12px;
+        width: 200px;
+    }
+}
+
 form #submit-btn{
     margin-top:40px; 
     cursor: pointer;
+}
+
+/*----Select---*/
+
+#sizeOption{
+
+    display: block;
+    padding: 10px 20px;
+    margin: 1em auto;
+    outline: none;
+    border: 1px black solid;
+    text-align: center;
+    font-family:'Quicksand', sans-serif;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+
+#sizeOption option:hover{
+background-color: rgb(35, 151, 245);
+}
+
+#change-size{ /* aling text in the change size form*/
+text-align: center;
 }
 
 .animation{
@@ -246,7 +308,7 @@ input[type="checkbox"]{
 
 /*---------------- modal window------------------*/ 
 
-.billing_information_modal{
+.container_modal{
     visibility: hidden;
     position: fixed;
     width: 100%;

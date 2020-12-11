@@ -1,8 +1,8 @@
 // get the information from the input field 
 /* from validation */
 
-const formulario = document.getElementById("billing-informaiton");
-const inputs = document.querySelectorAll( "#billing-informaiton input")
+const formulario = document.getElementById("change-size");
+const inputs = document.querySelectorAll( "#change-size input")
 
 const expresiones = {
 	name_lastname: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -15,8 +15,7 @@ const fileds_validation = {
 
     userName: false,
     lastName: false, 
-    userEmail: false,
-    id: false, 
+    userEmail: false, 
     orderN:false 
 }
 
@@ -33,9 +32,6 @@ const validateForm  = (e) =>{
         break;
         case "userEmail":
             validateFields(expresiones.email,e.target,"userEmail" )
-        break;
-        case "id":
-            validateFields(expresiones.id,e.target,"id" )
         break;
         case "orderNumber":
             validateFields(expresiones.order,e.target,"orderNumber" )
@@ -63,9 +59,6 @@ if(expresion.test(input.value)){
     if (field == "userEmail") {
         document.querySelector('.non_display_error_alert').innerHTML="<p>Invalid e-mail</p>"  
     }
-    if (field == "id") {
-        document.querySelector('.non_display_error_alert').innerHTML="<p>Invalid ID</p>"  
-    }
     if (field == "orderNumber") {
         document.querySelector('.non_display_error_alert').innerHTML="<p>Invalid Order number</p>"  
     }
@@ -87,24 +80,22 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (e) =>{
  e.preventDefault();
 
- if( fileds_validation.userName && fileds_validation.lastName && fileds_validation.userEmail && fileds_validation.id){     
+ if( fileds_validation.userName && fileds_validation.lastName && fileds_validation.userEmail){     
   
      var user_info ={
         user_name: document.getElementById('userName').value, 
         last_name: document.getElementById('lastName').value,
         email: document.getElementById('userEmail').value,
-        id: document.getElementById('id').value,
-        billing_address: document.getElementById('billing-address').value,
-        order_number: document.getElementById('orderNumber').value
+        order_number: document.getElementById('orderNumber').value,
+        new_size: document.getElementById('sizeOption').value
      } 
         
   // display the content in the modal window    
      document.getElementById("user_name").innerHTML = " " + user_info.user_name;
      document.getElementById("last_name").innerHTML = " " + user_info.last_name;
      document.getElementById("user_email").innerHTML = " " + user_info.email;
-     document.getElementById("user_id").innerHTML = " " + user_info.id;
-     document.getElementById("user_billing_address").innerHTML = " " + user_info.billing_address;
      document.getElementById("user_order_number").innerHTML = " " + user_info.order_number;
+     document.getElementById("new_size").innerHTML = " " + user_info.new_size;
   
 
        //disapear modal 
@@ -135,16 +126,15 @@ formulario.addEventListener('submit', (e) =>{
             Email.send({
           SecureToken :"ef86f175-3efb-431d-b8fb-c5945e32b73b",
             To : 'pagosandrescastro@gmail.com',
-            From :"guevaracastroandres@gmail.com",
-            Subject : "billing information change from" + info.user_name + " " + info.last_name,
-            Body : `Hi, this message is to change my billing information <br> user name: ${info.user_name}
+            From : "guevaracastroandres@gmail.com",
+            Subject : "Size Change" + info.user_name + " " + info.last_name,
+            Body : `Hi, this message is to change The size of my order <br> user name: ${info.user_name}
                    <br> Last name: ${info.last_name}
                    <br>  email: ${info.email}
-                   <br> ID: ${info.id}
-                   <br> Billing address: ${info.billing_address}
-                   <br> Order Number${info.order_number}`,
+                   <br> Order Number: ${info.order_number}
+                   <br> New Size: ${info.new_size}`,
             }).then(
-             message => alert(message), location.href ="../app/submitionPage.html"
+                message => alert(message),  location.href ="../app/submitionPage.html"
             );
         }
 
