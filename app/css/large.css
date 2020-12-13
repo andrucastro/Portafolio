@@ -36,6 +36,23 @@
         justify-content: center !important;
     }
 
+    .form-request-style label[for = request-drescription]{
+        grid-column: span 2;
+    }
+
+    .form-request-style textarea{
+        width: 70%;
+    }
+
+    /*check box */
+    #rr-agree{
+        height: 25px;
+        display: block;
+        position: relative;
+        display: block;
+        margin: 1.5em auto;
+    }
+
 
     /*------------------ MODAL--------------------*/
 

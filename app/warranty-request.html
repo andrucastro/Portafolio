@@ -9,14 +9,13 @@
     <link rel="stylesheet" href="../app/css/validation-form.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&family=Questrial&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>shiping information</title>
+    <title>Warranty request</title>
 </head>
 <body>
     <img src="../app/img/adidas-logo.jpg" alt="logo-adidas" class="small-logo animation">
-    <h1 class="headings-general animation">Shipping Information</h1>
-    <p class="sub-text animation">Enter the new shipping address </p>
+    <h1 class="headings-general animation request-a-refund">Warranty request</h1>
     <section class="container-center">
-        <form action="" name="shipping-information" class="form-request-style" id="shipping-information">
+        <form action="" name="request-refund" class="form-request-style" id="request-refund">
             <label for="userName">  
                 <input type="text" name="userName" placeholder="Name" id="userName">
             </label>
@@ -26,11 +25,12 @@
             <label for="userEmail">
                 <input type="email" name="userEmail" placeholder="email" id="userEmail">
             </label>
-            <label for="billing-address">
-                <input type="text" name="billing-address" placeholder="New Shipping addres" id="billing-address">
-            </label>
             <label for="orderNumber">
                 <input name="orderNumber" placeholder="Order number" id="orderNumber">
+            </label>
+            <label for="request-drescription">
+                <p>Describe your case</p>
+                <textarea name="request-drescription" id="request-drescription" cols="30" rows="10"></textarea>
             </label>
             <div class="non_display_error_alert">
             </div>
@@ -48,14 +48,16 @@
             <p>Name: <span id="user_name"></span></p>
             <p>last Name: <span id="last_name"></span></p>
             <p>E-mail:<span id="user_email"></span></p>
-            <p> New Billing Address:<span id="user_billing_address"></span></p>
             <p>order number:<span id="user_order_number"></span></p>
+            <p>Descriotion</p>
+            <p id="description"></p>
             <a href="tel:+573163562057" ><button class="btn-continue" id="make_call">Call</button></a>
             <button class="btn-continue" id="submit_request">submit Request</button>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/afd6c7ce26.js" crossorigin="anonymous"></script><!-- Font awespme incons -->
-    <script src="../app/js/shipping_information.js"></script><!-- app script  -->
+    <script src="../app/js/request-refund.js"></script><!-- app script  -->
     <script src="https://smtpjs.com/v3/smtp.js"></script><!-- email Api link -->
+    
 </body>
 </html>

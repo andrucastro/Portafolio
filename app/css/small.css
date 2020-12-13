@@ -127,6 +127,10 @@ font-weight: 10;
     margin-bottom: 2em;
 }
 
+.request-a-refund{
+    margin-bottom: 2em;
+}
+
 
 /*----------------SUB HEADINGS--------------------*/
 
@@ -202,6 +206,7 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 
@@ -266,6 +271,11 @@ background-color: rgb(35, 151, 245);
 
 #change-size{ /* aling text in the change size form*/
 text-align: center;
+}
+
+.form-request-style textarea{
+    width: 90%;
+    height: 100px;
 }
 
 .animation{
