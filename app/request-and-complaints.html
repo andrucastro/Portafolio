@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../app/css/normalize.css">
+    <link rel="stylesheet" href="../app/css/small.css">
+    <link rel="stylesheet" href="../app/css/large.css">
+    <link rel="stylesheet" href="../app/css/validation-form.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&family=Questrial&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Product questions</title>
+</head>
+<body>
+    <img src="../app/img/adidas-logo.jpg" alt="logo-adidas" class="small-logo animation">
+    <h1 class="headings-general animation request-a-refund">Request and Complaints</h1>
+    <section class="container-center">
+        <form action="" name="user-questions" class="form-request-style" id="user-questions">
+            <label for="userName">  
+                <input type="text" name="userName" placeholder="Name" id="userName">
+            </label>
+            <label for="lastName">
+                <input type="text" name="lastName" placeholder="Last Name" id="lastName" >
+            </label>
+            <label for="userEmail">
+                <input type="email" name="userEmail" placeholder="email" id="userEmail">
+            </label>
+            <label for="request-drescription">
+                <p>Drecribe your case</p>
+                <textarea name="request-drescription" id="request-drescription" cols="30" rows="10"></textarea>
+            </label>
+            <div class="non_display_error_alert">
+            </div>
+            <div class="form_error_submit">
+                <p>please fill out the form correctly <i class="fas fa-exclamation-triangle"></i></p>
+            </div>
+            <label for="submit-btn">
+                <button type="submit" class="btn-continue" id="submit-btn">continue</button>
+            </label>
+        </form>
+    </section>
+    <div class="container_modal">
+        <div class="modal">       
+           <h2>Confirm Your Information</h2>         
+            <p>Name: <span id="user_name"></span></p>
+            <p>last Name: <span id="last_name"></span></p>
+            <p>E-mail:<span id="user_email"></span></p>
+            <p>Description</p>
+            <p id="description"></p>
+            <a href="tel:+573163562057" ><button class="btn-continue" id="make_call">Call</button></a>
+            <button class="btn-continue" id="submit_request">submit Request</button>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/afd6c7ce26.js" crossorigin="anonymous"></script><!-- Font awespme incons -->
+    <script src="../app/js/complains-request.js"></script><!-- app script  -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script><!-- email Api link -->
+</body>
+</html> 
