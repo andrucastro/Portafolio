@@ -11,23 +11,57 @@
         <h2>Enter Client Info</h2>
         <form action="" name="create_macro" method="">
             <p>Sender ID requested</p>
-            <label for="SenderID">
-                <input type="text" name="SenderID" placeholder="Sender ID" id="SenderID">
+            <label for="senderID">
+                <input type="text" name="senderID" placeholder="Sender ID" id="senderID">
             </label>
-            <label for="lastName">
-                <input type="text" name="lastName" placeholder=" Last Name" id="lastName">
+            <p>Company Name</p>
+            <label for="companyName">
+                <input type="text" name="companyName" placeholder="Company Name" id="companyName">
             </label>
-            <label for="email">
-                <input type="email" name="userEmail" placeholder="Email" id="email"> 
-            </label>
-            <label for="phone" >
-                <input type="tel" name="Phone" id="phone" placeholder="phone Number">
-            </label>
+            <p>Use Case </p>
             <label for="shiping">
-                <input type="radio" name="shiping" id="shiping" value="express shiping"> Express shiping   
-                <input type="radio" name="shiping" id="shiping" value="standard shiping"> Standard shiping
-            </label>    
+                <input type="radio" name="UseCase" id="UseCase" value="Transactinal"> Transactinal   
+                <input type="radio" name="UseCase" id="UseCase" value="Promotional"> Promotional
+            </label>
+            <p>Comany Website</p>  
+            <label for="website" >
+                <input type="text" name="website" id="website" placeholder="Comany Website">
+            </label>
+            <p>URL in meesage body</p>  
+            <label for="smsUrl" >
+                <input type="text" name="smsUrl" id="smsUrl" placeholder="URL in meesage body">
+            </label>
+            <p>Sample SMS</p>  
+            <label for="sampleSMS" >
+                <textarea name="comentarios" rows="10" cols="40" placeholder="Enter SMS sample hereComany Website"></textarea>
+            </label>
+
+            <button type="button" id="catch_info" >Create Macro</button>
         </form>
     </section>
+    <div>
+        <h3>Syniverse</h3>
+        <pre>
+            I'd like to request the following Alpha Sender ID registered:
+
+            SenderID Requested: 
+            Destination: Saudi Arabia
+            Company Name: 
+            Purpose: <sapm>hioadsid</sapm>
+            Type of content: 
+            Company URL: 
+            Sample of Content: 
+            URL in Message Body:
+
+            Please let me know if you need any additional info.
+        </pre>
+    </div>
+    <div>
+        <h3>Mada</h3>
+    </div>
+    <div>
+        <h3>Ameex</h3>
+    </div>
+
 </body>
 </html>
