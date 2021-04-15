@@ -11,7 +11,7 @@
 
         table, td, th{
             text-align: center;
-            border: 1px black solid;
+            border: 1px rgb(0, 0, 0) solid;
             padding: 5px 6px ;
             border-collapse: collapse;
         } 
@@ -19,6 +19,22 @@
         table{
             margin-left: 1em;
         }
+
+        span{
+            font-weight: bold;
+        }
+
+        div {
+            border: 1px black solid;
+            margin-top: 3em;
+            padding: 2em;
+        }
+
+        pre{
+            font-size: 1.2em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
     </style>
 </head>
 <body>
@@ -57,15 +73,19 @@
             <button type="button" id="btn_createMacro" >Create Macro</button>
         </form>
     </section>
+
+   
+
+
     <div>
-        <h3>Syniverse</h3>
+        <h2>Syniverse</h2>
         <pre>
 I'd like to request the following Alpha Sender ID registered:
 
-SenderID Requested: 
+SenderID Requested:  <span id="syniverse_senderID"></span>
 Destination: Saudi Arabia
 Company Name: 
-Purpose: <sapm>hioadsid</sapm>
+Purpose: 
 Type of content: 
 Company URL: 
 Sample of Content: 
@@ -75,11 +95,11 @@ Please let me know if you need any additional info.
         </pre>
     </div>
     <div>
-        <h3>Mada</h3>
+        <h2>Mada</h2>
         <pre>
 I'd like to request the following Alpha Sender ID registered:
 
-Sender ID Requested :
+Sender ID Requested : <span id="mada_senderID"></span>
 Content Sample :
 URL in Message Body:
 URL:
@@ -89,17 +109,17 @@ Format
                     <th>Sender ID</th><th>Content Sample</th><th>Account ID</th><th>Website (if available)</th> 
                 </tr>
                 <tr>
-                    <td></td> <td></td> <td>[Twilio_drt]</td> <td></td>
+                    <td><span id="madaChart_senderID"></span></td> <td></td> <td>[Twilio_drt]</td> <td></td>
                 </tr>
             </table>
         </pre>
     </div>
     <div>
-        <h3>Ameex Authorized</h3>
+        <h2>Ameex Authorized</h2>
         <pre>
 I'd like to request the following Alpha Sender ID registered:
 
-Sender ID:
+Sender ID: <span id="ameex_senderID"></span>
 Company Name:
 Sample SMS:
 URL in Message Body:
@@ -110,11 +130,11 @@ Please register this Sender ID under the 'Authorized SMS' route, and you can fin
         </pre>
     </div>
     <div>
-        <h3>Ameex Common </h3>
+        <h2>Ameex Common </h2>
         <pre>
 I'd like to request the following Alpha Sender ID registered:
 
-Sender ID:
+Sender ID: 
 Company Name:
 Sample SMS:
 URL in Message Body:
