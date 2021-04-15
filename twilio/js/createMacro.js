@@ -30,7 +30,4 @@ function createMacros(){
     divs[i].style. backgroundColor= "#D6FCD6";
    }
 
-
-
-
 }
