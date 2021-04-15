@@ -17,7 +17,7 @@
         } 
 
         table{
-            margin-left: 5em;
+            margin-left: 1em;
         }
     </style>
 </head>
@@ -34,9 +34,12 @@
                 <input type="text" name="companyName" placeholder="Company Name" id="companyName">
             </label>
             <p>Use Case </p>
-            <label for="shiping">
-                <input type="radio" name="UseCase" id="UseCase" value="Transactinal"> Transactinal   
-                <input type="radio" name="UseCase" id="UseCase" value="Promotional"> Promotional
+            <label for="useCase">
+                <select name="useCase" id="useCase">
+                    <option value="OTP">OTP</option>
+                    <option value="Notification">Notification</option>
+                    <option value="Marketing">Marketing</option>
+                </select>
             </label>
             <p>Comany Website</p>  
             <label for="website" >
@@ -48,10 +51,10 @@
             </label>
             <p>Sample SMS</p>  
             <label for="sampleSMS" >
-                <textarea name="comentarios" rows="10" cols="40" placeholder="Enter SMS sample hereComany Website"></textarea>
+                <textarea id="sampleSMS" name="sampleSMS" rows="10" cols="40" placeholder="Enter SMS sample hereComany Website"></textarea>
             </label>
 
-            <button type="button" id="catch_info" >Create Macro</button>
+            <button type="button" id="btn_createMacro" >Create Macro</button>
         </form>
     </section>
     <div>
@@ -122,5 +125,6 @@ Please register this Sender ID under the Common SMS route, and you can find the 
         </pre>
     </div>
 
+  <script src="/twilio/js/createMacro.js"></script>  
 </body>
 </html>
