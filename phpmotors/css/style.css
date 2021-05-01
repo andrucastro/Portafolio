@@ -1,0 +1,223 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;   
+}
+
+/* headings */
+
+h1 { font-size: 1.5em; 
+     font-family: 'Zen Dots', cursive;
+}
+h2 { font-size: 1.5em;
+     font-family: 'Zen Dots', cursive;
+ }
+h3 { font-size: 0.5em;
+     font-family: 'Zen Dots', cursive;
+    }
+
+/* Large 
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+*/
+
+body{
+    font-size: 12px;
+}
+
+
+.blue_border_Main_container{
+    width: 100%;
+    margin:0;   
+    background-color: white
+}
+
+  
+/*---------------- First Logo Containe -----------------*/
+
+.logo_container_top{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/*Accomodate the logo in very small views*/
+@media(max-width:290px) {
+.logo_container_top img{
+   height:50px;
+  }
+
+}
+
+/* My Acount button, top of the pages styles*/
+.logo_container_top span{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 72px;
+    width:200px;
+}
+
+.logo_container_top span a{
+margin: 0 auto;
+text-decoration: none;
+font-size: 18px;
+color: #3a3a3a;
+}
+
+/*---------------- MENU NAV -----------------*/
+
+nav{
+    margin:0;
+    padding:0;
+    
+}
+
+nav ul{
+    background-color:#3a3a3a ;
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+}
+
+nav li{
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+nav li:hover{
+    background-color: #4c96d7;
+}
+
+nav li a:hover{
+    color:#3a3a3a;
+}
+
+nav ul li a{
+    display: block;
+    text-decoration:none;
+    padding: 0.8em;
+    color: white;
+
+}
+
+/*--------------------- MAIN PAGE DELOREAN PAGE  -----------------*/
+
+main{
+ margin: 0.8em;
+}
+
+.delorean_container{
+    width: 100%;
+    height:200px;
+    position: relative;
+    margin: 1em;  
+    display: inline-block;
+}
+
+.delorean_container img{
+    width: 100%;  
+}
+
+.deloarean_info_box{
+  position: absolute;
+}
+
+
+.deloarean_info_box h2{
+   font-size: 1em;
+   color: #225a8b;
+}
+
+
+.deloarean_info_box p{
+      color:#225a8b;
+  }
+
+
+.btn_own_today{
+    width: 45%;
+    margin: 10% auto;
+}
+
+.btn_own_today_large_view{
+    display: none;
+}
+
+.btn_own_today img{
+    width: 100%;
+}
+
+/*--------------------- DELOREAN REVIWES  -----------------*/
+
+.delorean_reviews{
+    margin: 1em 0;
+}
+
+.delorean_reviews h2{
+    margin: 0.8em 0;
+    color: black;
+}
+
+.delorean_reviews ul{
+    margin:0 2em;
+}
+
+.delorean_reviews li{
+    padding: 0.5em 0;
+}
+
+/*--------------------- DELOREAN UPGRADES  -----------------*/
+
+.delorean_upgrades h2{
+    color: black;
+}
+
+.upgrades_flex_container{
+display: grid;
+grid-template-columns: 49% 49%;
+grid-gap:0% 2%;
+margin:1em 0;
+}
+
+.upgrades_flex_container div{
+    background-color: #4c96d7;
+    flex:48%;;
+    height: 5em;
+    display: flex;
+    align-items: center;
+}
+
+.upgrades_flex_container img{
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+}
+
+.upgrades_flex_container a{
+   text-align: center;
+   padding-bottom: 1em;
+}
+
+
+
+/*------------------------ FOOTER ---------------------------*/
+
+footer{
+    border-top:  3px solid black;
+    padding: 0.5em 1em ;
+}
+
+footer p{
+    text-align: center;
+}
+
+
+
+
+

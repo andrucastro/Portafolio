@@ -1,0 +1,65 @@
+@media(min-width: 700px) {
+    
+/* headings */
+
+body{
+background: url(/phpmotors/images/site/small_check.jpg);
+background-repeat: no-repeat;
+background-size:cover;
+font-size: 16px;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+
+
+.blue_border_Main_container{
+    width: 95%;
+    margin:1em auto;   
+    background-color: white;
+    border: solid 4px #4c96d7;
+    border-radius: 10px;
+}
+
+.btn_own_today_large_view{
+    display: block;
+    width: 60%;
+    margin-top:1em;
+}
+
+.btn_own_today{
+    display: none;
+}
+
+.delorean_info{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.delorean_reviews{
+    flex: 50%;
+    padding: 2.5em;
+    margin: 0;
+}
+
+/* delete this styles from the small view
+to aling the headings "Deloran Upgrates and DMC
+Delorian review" in large view  */
+.delorean_reviews h2{
+    margin: 0;
+}
+
+.delorean_reviews ul{
+    margin-top: 10px;
+}
+
+
+.delorean_upgrades{
+    flex: 50%;
+    padding: 2.5em;
+}
+
+
+}
